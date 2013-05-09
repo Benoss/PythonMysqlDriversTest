@@ -28,21 +28,21 @@ except ImportError:
     use_pymysql = False
 
 
-print "- Compare python mysql drivers, don't forget to run it twice in order to warmup your db -"
-print "*Python version: {} ".format(sys.version)
-print "*Platform: {} ".format(platform.platform())
-print "*Database: https://launchpad.net/test-db 1.0.6"
+print "##  Compare python mysql drivers, don't forget to run it twice in order to warmup your db"
+print "* Python version: {} ".format(sys.version)
+print "* Platform: {} ".format(platform.platform())
+print "* Database: https://launchpad.net/test-db 1.0.6"
 if use_mysqldb:
-    print "*MySQLdb version: {} url:{}".format(MySQLdb.__version__, "https://github.com/farcepest/MySQLdb1")
+    print "* MySQLdb version: {} url:{}".format(MySQLdb.__version__, "https://github.com/farcepest/MySQLdb1")
 
 if use_mysql_connector:
-    print "*mysql.connector version: {} url:{}".format(".".join(str(x) for x in version.VERSION[:3]), "http://dev.mysql.com/downloads/connector/python/")
+    print "* mysql.connector version: {} url:{}".format(".".join(str(x) for x in version.VERSION[:3]), "http://dev.mysql.com/downloads/connector/python/")
     
 if use_oursql:
-    print "*oursql version: {} url:{}".format(oursql.__version__, "https://launchpad.net/oursql")
+    print "* oursql version: {} url:{}".format(oursql.__version__, "https://launchpad.net/oursql")
     
 if use_pymysql:
-    print "*pymysql version: {} url:{}".format(pymysql.__version__, "https://github.com/petehunt/PyMySQL")
+    print "* pymysql version: {} url:{}".format(pymysql.__version__, "https://github.com/petehunt/PyMySQL")
 
 
     
@@ -131,48 +131,48 @@ steps = 10000
 
 
 
-print "-- Simple Select 1 record {}x --".format(steps)
+print "##  Simple Select 1 record {}x ".format(steps)
 if use_mysqldb:
-    print simpleSelect(steps, conn(MySQLdb)), 'MySQLdb' 
+    print "* ", simpleSelect(steps, conn(MySQLdb)), 'MySQLdb' 
 if use_oursql:
-    print simpleSelect(steps, conn(oursql), '?'), 'oursql'
+    print "* ", simpleSelect(steps, conn(oursql), '?'), 'oursql'
 if use_mysql_connector:
-    print simpleSelect(steps, conn(mysql.connector)), 'mysql.connector'
+    print "* ", simpleSelect(steps, conn(mysql.connector)), 'mysql.connector'
 if use_pymysql:
-    print simpleSelect(steps, conn(pymysql)), 'pymysql'
-print "-- Select 500 rows {}x--".format(steps/10)
+    print "* ", simpleSelect(steps, conn(pymysql)), 'pymysql'
+print "##  Select 500 rows {}x".format(steps/10)
 if use_mysqldb:
-    print select500(steps, conn(MySQLdb)), 'MySQLdb'
+    print "* ", select500(steps, conn(MySQLdb)), 'MySQLdb'
 if use_oursql:
-    print select500(steps, conn(oursql), '?'), 'oursql'
+    print "* ", select500(steps, conn(oursql), '?'), 'oursql'
 if use_mysql_connector:
-    print select500(steps, conn(mysql.connector)), 'mysql.connector'
+    print "* ", select500(steps, conn(mysql.connector)), 'mysql.connector'
 if use_pymysql:
-    print select500(steps, conn(pymysql)), 'pymysql'
-print "-- Select 500 rows with 500 args {}x--".format(steps/10)
+    print "* ", select500(steps, conn(pymysql)), 'pymysql'
+print "##  Select 500 rows with 500 args {}x".format(steps/10)
 if use_mysqldb:
-    print select500with500Args(steps, conn(MySQLdb)), 'MySQLdb'
+    print "* ", select500with500Args(steps, conn(MySQLdb)), 'MySQLdb'
 if use_oursql:
-    print select500with500Args(steps, conn(oursql), '?'), 'oursql'
+    print "* ", select500with500Args(steps, conn(oursql), '?'), 'oursql'
 if use_mysql_connector:
-    print select500with500Args(steps, conn(mysql.connector)), 'mysql.connector'
+    print "* ", select500with500Args(steps, conn(mysql.connector)), 'mysql.connector'
 if use_pymysql:
-    print select500with500Args(steps, conn(pymysql)), 'pymysql'
-print "-- Select 300k id  {}x--".format(steps/2000)
+    print "* ", select500with500Args(steps, conn(pymysql)), 'pymysql'
+print "##  Select 300k id  {}x".format(steps/2000)
 if use_mysqldb:
-    print select300kID(steps, conn(MySQLdb)), 'MySQLdb'
+    print "* ", select300kID(steps, conn(MySQLdb)), 'MySQLdb'
 if use_oursql:
-    print select300kID(steps, conn(oursql), '?'), 'oursql'
+    print "* ", select300kID(steps, conn(oursql), '?'), 'oursql'
 if use_mysql_connector:
-    print select300kID(steps, conn(mysql.connector)), 'mysql.connector'
+    print "* ", select300kID(steps, conn(mysql.connector)), 'mysql.connector'
 if use_pymysql:
-    print select300kID(steps, conn(pymysql)), 'pymysql'
-print "-- Simple Select 1M3 id  {}x--".format(steps/10000)
+    print "* ", select300kID(steps, conn(pymysql)), 'pymysql'
+print "##  Simple Select 1M3 id  {}x".format(steps/10000)
 if use_mysqldb:
-    print select1M(steps, conn(MySQLdb)), 'MySQLdb'
+    print "* ", select1M(steps, conn(MySQLdb)), 'MySQLdb'
 if use_oursql:
-    print select1M(steps, conn(oursql), '?'), 'oursql'
+    print "* ", select1M(steps, conn(oursql), '?'), 'oursql'
 if use_mysql_connector:
-    print select1M(steps, conn(mysql.connector)), 'mysql.connector'
+    print "* ", select1M(steps, conn(mysql.connector)), 'mysql.connector'
 if use_pymysql:
-    print select1M(steps, conn(pymysql)), 'pymysql'
+    print "* ", select1M(steps, conn(pymysql)), 'pymysql'
