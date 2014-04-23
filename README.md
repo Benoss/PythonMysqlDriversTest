@@ -2,7 +2,7 @@ PythonMysqlDriversTest
 ======================
 
 Python Mysql Drivers Benchmark
-Related Blog Post: url:http://mypysql.blogspot.co.nz/2013/05/comparaison-of-pythonmysql-connectors.html
+- Related Blog Post: url:http://mypysql.blogspot.co.nz/2013/05/comparaison-of-pythonmysql-connectors.html
 
 ##  Compare python mysql drivers
 * Python version: 2.7.2 (default, Jun 12 2011, 15:08:59) MSC v.1500 32 bit (Intel)
