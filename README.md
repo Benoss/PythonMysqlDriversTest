@@ -2,11 +2,12 @@ PythonMysqlDriversTest
 ======================
 
 Python Mysql Drivers Benchmark
+Related Blog Post: url:http://mypysql.blogspot.co.nz/2013/05/comparaison-of-pythonmysql-connectors.html
 
 ##  Compare python mysql drivers
 * Python version: 2.7.2 (default, Jun 12 2011, 15:08:59) MSC v.1500 32 bit (Intel)
 * Platform: Windows-7-6.1.7601-SP1 
-* Database: https://launchpad.net/test-db 1.0.6
+* Database: url:https://launchpad.net/test-db 1.0.6
 * MySQLdb version: 1.2.3 url:https://github.com/farcepest/MySQLdb1
 * mysql.connector version: 1.0.10 url:http://dev.mysql.com/downloads/connector/python/
 * oursql version: 0.9.3.1 url:https://launchpad.net/oursql
